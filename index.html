@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./axios.js"></script>
+    <script src="./vue.js"></script>
+    <script src="https://autumnfish.cn/top/song"></script>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        div{
+            display: block;
+        }
+        li{
+            text-align: -webkit-match-parent;
+        }
+        ul{
+            list-style-type: disc;
+        }
+        .boxx{
+            width: 982px;
+            height:1499px ;
+            margin-right: -300px;
+        }
+        .box{
+            text-align: center;
+            width: 680px;
+            height: 1499px;
+            
+            padding: 20px 30px;
+        }
+        .box li{
+            text-align: -webkit-match-parent;
+        }
+        .box_1{
+            display: block;
+            width: 620px;
+            height: 42px;
+        }
+        .box_1 h3{
+            float: left;
+           
+            font-weight: normal;
+        }
+        .box_1_1{
+            width: 48px;
+            height: 33px;
+            font-size: 24px;
+        }
+        .box_1 .box_1_2{
+            float: right;
+            font-weight: 24px;
+            margin: 6px 0 0 10px;
+        }
+        .toxb .sadfs{
+            margin-left: 55px;
+            padding-top: 0px;
+        }
+        #tox{
+            width: 620px;
+            height: 1397px;
+        }
+        .toxa{
+            width: 620px;
+            height: 1397px;
+            position: relative;
+        }
+        .toxb {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            width: 565px;
+
+        }
+        
+
+        
+        .sadfs{
+            width: 565px;
+            height: 458px;
+        }
+        .asdfasdf{
+            width: 565px;
+            height: 454px;
+        }
+        /* .sfdsdsds{
+            position: relative;
+        } */
+        .toxb .saeaa{
+            width: 620px;
+            height: 497px;
+            
+        }
+        
+        .saeaa .asdfafa{
+            float: left;
+            
+        }
+        .saeaa .ficon{
+            float: left;
+        }
+        .saeaa .akdfjkdksd{
+            float: left;
+        }
+        .saeaa .sdgasdfsd{
+            float: left;
+        }
+        .adsdfa{
+            
+            width: 565px;
+            height: 18px;
+            
+            margin: 0 auto
+            
+        }
+        .saeaa .sdfkskdsd{
+            width: 565px;
+            height: 60px;
+        }
+        
+        .ficon{
+            width: 45px;
+            height: 45px;
+        }
+       .toxb .sdffgadsf{
+            line-height: 24px;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .saeaa .sdffgadsf{
+            width: 565px;
+            height: 72px;
+        }
+        .saeaa .askdfjjdk{
+            width: 620px;
+            height: 320px;
+        }
+        .askdfjjdk .jsdhfksjd{
+            width: 565px;
+            height: 60px;
+            margin: 0px 0 5px;
+            padding: 10px;
+        }
+        .askdfjjdk .dshgjksdl{
+            width: 40px;
+            height: 40px;
+        }
+        .toxb .sdfkskdsd .sdifuejdis{
+            width: 475px;
+            height: 44px;
+            padding: 0 0 0 40px;
+            margin-top: -40px;
+            position: relative;
+            color:#333;
+        }
+        .sdifuejdis h3 a{
+            color:#333;
+            font-size: 16px;
+            height: 22px;
+            float: left;
+        }
+        .sdifuejdis h5 a{
+            
+            font-size: 16px;
+            height: 22px;
+            float: left;
+            
+        }
+        .odijfoslj{
+
+            float: right;
+        }
+        .toxb .itm{
+            position: relative;
+            padding: 20px 0;
+            
+        }
+
+
+
+
+
+
+
+        
+    </style> 
+</head>
+<body>
+    <div id="app">
+        <header>
+            <!-- 内容区域 -->
+            <div class="container">
+    
+                <!-- LOGO -->
+                <a href="#">
+                    <div class="logo"></div>
+                </a>
+    
+                <!-- 导航条 -->
+                <nav class="nav-v">
+                    <ul>
+                        <li id="black">发现音乐</li>
+                        <li>我的音乐</li>
+                        <li>朋友</li>
+                        <li>商城</li>
+                        <li>音乐人</li>
+                        <li>下载客户端</li>
+                    </ul>
+                    <div class="hot"></div>
+                </nav>
+    
+                <!-- 搜索框 -->
+                <div class="search">
+                    <input type="text" id="search_text" value="音乐/视频/电台/用户">
+                    <div class="img_search"></div>
+                </div>
+    
+                <!-- 创作者中心 -->
+                <a href="#">
+                    <div class="center">创作者中心</div>
+                </a>
+    
+                <!-- 登陆选项 -->
+                <div class="logIn">
+                    <span class="logIn_p">登录</span>
+                    <ul id="logIn">
+                        <li>
+                            手机号登录
+                            <div id="phone"></div>
+                        </li>
+                        <li>
+                            微信登录
+                            <div id="WeChat"></div>
+                        </li>
+                        <li>
+                            QQ登录
+                            <div id="QQ"></div>
+                        </li>
+                        <li>
+                            新浪微博登录
+                            <div id="sina"></div>
+                        </li>
+                        <li>
+                            网易邮箱账号登录
+                            <div id="WangYi"></div>
+                        </li>
+                    </ul>
+                </div>
+    
+                <!-- 登录选项右侧三角 -->
+                <div class="triangle"></div>
+                <br><br><br><br><br><br>
+                <div class="boxx">
+                    <div class="box" >
+                    
+                        <div class="box_1">
+                            <h3>
+                                <span class="box_1_1">动态</span>
+                            </h3>
+                            <span class="box_1_2">发布视频</span>
+                            <span class="box_1_2">发布动态</span>
+                        </div>
+                        <div id="tox">
+                            <div class="toxa">
+                                <ul class="toxb">
+                                    <li class="itm">
+                                        <div class="saeaa">
+                                            <a class="ficon" href="#">
+                                                  <img src="../wangyiyun/images/109951165050882728.jpg"  alt="">
+                                            </a>
+                                            <div class="sadfs">
+                                                <div class="asdfasdf">
+                                                    <div class="adsdfa">
+                                                        <a href="#" class="asdfafa">网易云音乐</a>
+                                                        <sup class=""></sup>
+                                                        <span class="akdfjkdksd">分享单曲</span>
+                                                    </div>
+                                                    <br>
+                                                    <div class="sdgasdfsd">
+                                                        <a href="#">两分钟前</a>
+                                                    </div>
+                                                    <br>
+                                                    <b></b>
+                                                    <br>
+                                                    
+                                                    <div class="sdffgadsf">
+                                                        “马思唯携第二张个人专辑首发单曲《为什么》回归！R&B编曲加上耐人寻味的歌词，展开了一段以小人
+                                                        物自居的情感自白。一连串的“为什么”，仿佛在对着离去的爱人质问，同时又是在对着自己发问。是一
+                                                        首会让每一个曾经经历过爱情别离的人，感到共鸣的歌曲”
+                                                        <img src="" alt="">
+                                                    </div>
+                                                    <div class="askdfjjdk">
+                                                        <div class="sdfkskdsd">
+                                                            <div class="jsdhfksjd">
+                                                                <div class="dshgjksdl">
+                                                                     <span class="pdsdfsd"><img src="../wangyiyun/images/109951165624108764.jpg" width="100%" height="100%" alt=""></span>
+                                                    
+                                                                </div>
+                                                                <div class="sdifuejdis">
+                                                                    <h3>
+                                                                        <a href="#">&nbsp;&nbsp;&nbsp;为什么</a>
+                                                                    </h3>
+                                                                    <br><br>
+                                                                    <h5>
+                                                                        <a href="#" title="">&nbsp;&nbsp;&nbsp;马思唯</a>
+                                                                    </h5>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div id="slkfds">
+                                                            <ul class="dcjhvi">
+                                                                <li class="qwlkso">
+                                                                    <img src="../wangyiyun/images/109951165624108764.jpg" alt="">
+                                                                </li>
+                                                            </ul>
+                                                            <div>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="odijfoslj">
+                                                        <a href="">(143)</a><span>|</span>
+                                                        <a href="">转发</a><span>(0)</span><span>|</span>
+                                                        <a href="">评论</a><span>(32)</span>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="itm">
+                                        <div class="saeaa">
+                                            <a class="ficon" href="#">
+                                                  <img src="../wangyiyun/images/109951165050882728.jpg"  alt="">
+                                            </a>
+                                            <div class="sadfs">
+                                                <div class="asdfasdf">
+                                                    <div class="adsdfa">
+                                                        <a href="#" class="asdfafa">网易云音乐</a>
+                                                        <sup class=""></sup>
+                                                        <span class="akdfjkdksd">分享单曲</span>
+                                                    </div>
+                                                    <br>
+                                                    <div class="sdgasdfsd">
+                                                        <a href="#">两分钟前</a>
+                                                    </div>
+                                                    <br>
+                                                    <b></b>
+                                                    <br>
+                                                    
+                                                    <div class="sdffgadsf">
+                                                        “马思唯携第二张个人专辑首发单曲《为什么》回归！R&B编曲加上耐人寻味的歌词，展开了一段以小人
+                                                        物自居的情感自白。一连串的“为什么”，仿佛在对着离去的爱人质问，同时又是在对着自己发问。是一
+                                                        首会让每一个曾经经历过爱情别离的人，感到共鸣的歌曲”
+                                                        <img src="" alt="">
+                                                    </div>
+                                                    <div class="askdfjjdk">
+                                                        <div class="sdfkskdsd">
+                                                            <div class="jsdhfksjd">
+                                                                <div class="dshgjksdl">
+                                                                     <span class="pdsdfsd"><img src="../wangyiyun/images/109951165624108764.jpg" width="100%" height="100%" alt=""></span>
+                                                    
+                                                                </div>
+                                                                <div class="sdifuejdis">
+                                                                    <h3>
+                                                                        <a href="#">&nbsp;&nbsp;&nbsp;为什么</a>
+                                                                    </h3>
+                                                                    <br><br>
+                                                                    <h5>
+                                                                        <a href="#" title="">&nbsp;&nbsp;&nbsp;马思唯</a>
+                                                                    </h5>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div id="slkfds">
+                                                            <ul class="dcjhvi">
+                                                                <li class="qwlkso">
+                                                                    <img src="../wangyiyun/images/109951165624108764.jpg" alt="">
+                                                                </li>
+                                                            </ul>
+                                                            <div>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="odijfoslj">
+                                                        <a href="">(143)</a><span>|</span>
+                                                        <a href="">转发</a><span>(0)</span><span>|</span>
+                                                        <a href="">评论</a><span>(32)</span>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- <li class="itm">
+                                         <div class="wewrfa">
+                                            <a href="">
+                                                 <img src="../wangyiyun/images/109951165050882728.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="sfnsajl">
+                                            <div class="adjfhjsd">
+                                                <div>
+                                                    <a href="">网易云音乐</a>
+                                                    <sup></sup>
+                                                    <span>分享单曲</span>
+                                                </div>
+                                                <div class="time"><a href="">两分钟前</a></div>
+                                                <div class="sjshfksd">
+                                                    复古女伶Lana Del Rey第七张专辑《Chemtrails Over The Country Club》同名主打曲上线，音乐录像带同步首播
+                                                    <img src="" alt="">
+                                                    专辑共将收录11首曲目，包括此前发行的单曲《Let Me Love You Like A Woman》！打雷姐一开口，立刻把人从寒冬带回到summertime
+                                                    <img src="" alt="">
+                                                </div>
+                                                <div class="ashdfsk">
+                                                    <div class="adfhjisdfl">
+                                                        <div class="safhjksdl">
+                                                            <div class="ksjdgusjdk">
+                                                                <span class="shdfisdse">
+                                                                    <img src="../wangyiyun/images/109951165623629554.jpg" alt="">
+                                                                </span>
+                                                                <a href="">
+
+                                                                </a>
+                                                            </div>
+                                                            <div class="dyfisjsd">
+                                                                <h3><a href="">Chemtrails Over The Country Club</a></h3>
+                                                                <h4><a href="">Lana Del Rey</a></h4>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    <div class="jsuyhdjs">
+                                                        <ul class="sdhfsjdhe">
+                                                            <li class="sjdfjkjk">
+                                                                <img src="../wangyiyun/images/109951165623629554.jpg" alt="">
+                                                            </li>
+                                                        </ul>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <a href="">(143)</a><span>|</span>
+                                                    <a href="">转发</a><span>(0)</span><span>|</span>
+                                                    <a href="">评论</a><span>(32)</span>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                    </li> -->
+                                    <li class="itm">
+                                        <div class="isufiskl"></div>
+                                        <div class="iysidfode">
+                                            <div class="siygdfilwe">
+                                                <img src="../wangyiyun/images/109951165621838400.jpg" alt="">
+                                                <span>
+
+                                                </span>
+                                                <div class="ajdhfjsl">
+                                                    <div class="ksafkjle">
+                                                        <h3 class="qwuehkwe">
+                                                            #听歌吧！干饭人#
+                                                            <div class="uiokkjl">
+                                                                <span>
+                                                                    <em>
+                                                                        xxxxxxxxx
+                                                                    </em>
+                                                                    <i>
+                                                                        217人参与
+                                                                    </i>
+                                                                </span>
+                                                            </div>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                    </li>
+                                </ul>
+                                <div class="dosifoeoe"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="iisfkwl">
+                        <div class="iadufps">
+                            <a href="">
+                                <img src="" alt="">
+                            </a>
+                            <h5><a href="">月济苍穹</a></h5>
+                            <p></p>
+                            <ul class="ksdjokwe">
+                                <li><a href=""><em></em><i></i></a></li>
+                                <li><a href=""><em></em><i></i></a></li>
+                                <li><a href=""><em></em><i></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="aksdjfl">
+                            <div class="askufokfsd"><i></i></div>
+                            <div class="sdfiskdl">
+                                <div class="sihospsl">
+                                    <h4>
+                                        明星用户
+                                    </h4>
+                                    <a href="">
+                                        换一批
+                                    </a>
+                                </div>
+                                <!-- <ul class="sdijfopsd">
+                                    <li class="sgjke">
+                                        <a href="">
+                                            <img src="" alt="">
+                                        </a>
+                                        <div>
+                                            <div>
+                                                <a href="">
+                                                    <span>
+                                                        斯琴高丽
+                                                    </span>
+                                                    <sup>
+
+                                                    </sup>
+                                                </a>
+                                            </div>
+                                            <div>著名歌手、演员</div>
+                                        </div>
+                                        
+                                        <div>
+                                            <div>
+                                                <a href="">
+                                                    <i>关注</i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div><a href=""></a></div>
+                                    </li>
+                                    <li class="skfuok">
+                                        <a href="">
+                                            <img src="" alt="">
+                                        </a>
+                                        <div>
+                                            <div>
+                                                <a href="">
+                                                    <span>林海</span><sup></sup></a></div><div>著名音乐节目主持人</div></div>
+                                        <div><div><a href=""><i></i></a></div></div>
+                                        <div><a href=""></a></div>
+                                    </li>
+                                    <li class="skdokwel">
+                                        <a href=""><img src="" alt=""></a>
+                                        <div>
+                                            <div>
+                                                <a href="">
+                                                    <span>尚雯婕</span>
+                                                    <sup></sup>
+                                                </a>
+                                            </div>
+                                            <div>原创电子唱作人</div>
+                                        </div>
+                                        <div><div><a href=""><i></i></a></div></div>
+                                        <div><a href=""></a></div>
+                                    </li>
+                                </ul> -->
+                            </div>
+                            <div class="sfsudskkf"></div>
+                            <div class="uifosdfdg"></div>
+                        </div>
+                    </div>
+                </div>
+                
+    
+            </div>
+    
+        </header>
+
+        <!-- <button @click='getYinyue'>点击</button> -->
+       
+    
+    </div>
+</body>
+</html>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            // type:'',
+            
+            // name:'',
+            // id:'',
+            // songs:[],
+            // img1v1Url:''
+        },
+        methods: {
+             getYinyue:function(){
+                 let _this = this;
+                 axios.get('http://localhost:3000/getyinyue?type=7').then(function(response){
+                     console.log(response)
+                 })
+             }
+        },
+    })
+    // fetch('http://localhost:3000/getyinyue?type=0').then(function(res){
+    //     return res.json()
+    // }).then(function(res){
+    //     console.log(res);
+    // })
+</script>
